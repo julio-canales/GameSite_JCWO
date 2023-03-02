@@ -1,0 +1,25 @@
+<div *ngIf="!gameEnd">
+    <h3>Player turn: {{playerTurn}}</h3>
+    <table>
+        <tr>
+            <td><button class="btn btn-light" (click)="handleMove(0, 0, $event)"></button></td>
+            <td><button class="btn btn-light" (click)="handleMove(0, 1, $event)"></button></td>
+            <td><button class="btn btn-light" (click)="handleMove(0, 2, $event)"></button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light" (click)="handleMove(1, 0, $event)"></button></td>
+            <td><button class="btn btn-light" (click)="handleMove(1, 1, $event)"></button></td>
+            <td><button class="btn btn-light" (click)="handleMove(1, 2, $event)"></button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light" (click)="handleMove(2, 0, $event)"></button></td>
+            <td><button class="btn btn-light" (click)="handleMove(2, 1, $event)"></button></td>
+            <td><button class="btn btn-light" (click)="handleMove(2, 2, $event)"></button></td>
+        </tr>
+    </table>
+</div>
+
+<div *ngIf="gameEnd">
+    <h3>Winner: {{winnerText}}</h3>
+    <button (click)="resetGame()">New Game</button>
+</div>

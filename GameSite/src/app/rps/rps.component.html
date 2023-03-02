@@ -1,0 +1,27 @@
+<h1>Rock Paper Scissors</h1>
+<div class="gamebody">
+    
+    <div class="d player">
+        <h2>Player Move</h2>
+        <button (click)="makeMove(1)" class="btn btn-danger choice">&#9994;</button>
+        <button (click)="makeMove(2)" class="btn btn-primary choice">&#9995;</button>
+        <button (click)="makeMove(3)" class="btn btn-warning choice">&#9996;</button>
+        <p>Player wins: {{playerWins}}</p>
+    </div>
+
+    <div class="d info">
+        <h2>Round {{round}}</h2>
+        <div *ngIf="gameStarted">
+            <h3 class="status">{{roundStatus}}</h3>
+            <button (click)="resetGame()" class="btn btn-dark">Reset Game</button>
+        </div>
+        
+    </div>
+
+    <div class="d comp">
+        <h2>Computer Move</h2>
+        <h3 class="comp-emoji" [innerHTML]="compEmoji"></h3>
+        <h4>{{compText}}</h4>
+        <p>Computer wins: {{compWins}}</p>
+    </div>
+</div>
